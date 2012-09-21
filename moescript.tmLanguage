@@ -132,7 +132,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;!\.|@|::)\b(pass|break|else|for|if|return|repeat|while|until|when|where|piecewise|case|otherwise)\b(?![ \t]*:)</string>
+			<string>(?&lt;!\.|@|::)\b(break|else|for|if|return|repeat|while|until|when|where|try|catch)\b(?![ \t]*:)</string>
 			<key>name</key>
 			<string>keyword.control.moescript</string>
 		</dict>
@@ -144,7 +144,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;!\.|@|::)\b(do|resend|new|true|false)\b(?![ \t]*:)</string>
+			<string>(?&lt;!\.|@|::)\b(do|resend|new|wait|throw|try)\b(?![ \t]*:)</string>
 			<key>name</key>
 			<string>constant.language.moescript</string>
 		</dict>
@@ -156,13 +156,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;!\.|@|::)\b(and|or|is|as|not|in|negate)\b(?![ \t]*:)</string>
+			<string>(?&lt;!\.|@|::)\b(and|or|is|as|not|negate)\b(?![ \t]*:)</string>
 			<key>name</key>
 			<string>keyword.operator.moescript</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\+|-|%|#|\*|\/|\^|!?==?|~=|&lt;=?|&gt;=?|(?&lt;!\.)\.{2}(?!\.)|&amp;&amp;|\|\|&lt;-</string>
+			<string>\+|-|%|#|\*|\/|\^|==?|~=|&lt;=?|&gt;=?|(?&lt;!\.)\.{2}(?!\.)|&amp;&amp;|\|\|</string>
 			<key>name</key>
 			<string>keyword.operator.moescript</string>
 		</dict>
