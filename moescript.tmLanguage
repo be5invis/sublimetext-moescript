@@ -44,7 +44,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>'</string>
+			<string>'(?!'')</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -70,6 +70,63 @@
 				<dict>
 					<key>match</key>
 					<string>''</string>
+					<key>name</key>
+					<string>constant.character.escape.moescript</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>```</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.moescript</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>```g?i?m?x?</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.moescript</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.regexp.heredoc.moescript</string>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>`(?!``)</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.moescript</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>`g?i?m?x?</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.moescript</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.regexp.moescript</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>``</string>
 					<key>name</key>
 					<string>constant.character.escape.moescript</string>
 				</dict>
@@ -132,7 +189,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;!\.|@|::)\b(break|else|for|if|return|repeat|while|until|when|where|try|catch)\b(?![ \t]*:)</string>
+			<string>(?&lt;!\.|@|::)\b(break|else|for|if|return|repeat|while|until|when|where|try|catch|piecewise|otherwise)\b(?![ \t]*:)</string>
 			<key>name</key>
 			<string>keyword.control.moescript</string>
 		</dict>
@@ -144,7 +201,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;!\.|@|::)\b(do|resend|new|wait|throw|try)\b(?![ \t]*:)</string>
+			<string>(?&lt;!\.|@|::)\b(do|resend|new|wait|throw)\b(?![ \t]*:)</string>
 			<key>name</key>
 			<string>constant.language.moescript</string>
 		</dict>
