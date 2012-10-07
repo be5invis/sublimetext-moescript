@@ -20,31 +20,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>'''</string>
-			<key>beginCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.begin.moescript</string>
-				</dict>
-			</dict>
-			<key>end</key>
-			<string>'''</string>
-			<key>endCaptures</key>
-			<dict>
-				<key>0</key>
-				<dict>
-					<key>name</key>
-					<string>punctuation.definition.string.end.moescript</string>
-				</dict>
-			</dict>
-			<key>name</key>
-			<string>string.quoted.heredoc.moescript</string>
-		</dict>
-		<dict>
-			<key>begin</key>
-			<string>'(?!'')</string>
+			<string>'</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -77,7 +53,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>```</string>
+			<string>\[(=+)\[</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -87,7 +63,7 @@
 				</dict>
 			</dict>
 			<key>end</key>
-			<string>```g?i?m?x?</string>
+			<string>\]\1\]</string>
 			<key>endCaptures</key>
 			<dict>
 				<key>0</key>
@@ -97,11 +73,11 @@
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>string.regexp.heredoc.moescript</string>
+			<string>string.heredoc.moescript</string>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>`(?!``)</string>
+			<string>`</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>0</key>
@@ -126,7 +102,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>``</string>
+					<string>\\u[a-fA-F0-9]{4}|\\\S</string>
 					<key>name</key>
 					<string>constant.character.escape.moescript</string>
 				</dict>
@@ -189,7 +165,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;!\.|@|::)\b(break|else|for|if|return|repeat|while|until|when|where|try|catch|piecewise|otherwise)\b(?![ \t]*:)</string>
+			<string>(?&lt;!\.|@|::)\b(break|else|for|if|return|repeat|while|until|when|where|try|catch|piecewise|case|otherwise)\b(?![ \t]*:)</string>
 			<key>name</key>
 			<string>keyword.control.moescript</string>
 		</dict>
