@@ -45,7 +45,15 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>''</string>
+					<string>\\\S</string>
+					<key>name</key>
+					<string>constant.character.escape.moescript</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>\\\s</string>
+					<key>end</key>
+					<string>\\</string>
 					<key>name</key>
 					<string>constant.character.escape.moescript</string>
 				</dict>
@@ -195,7 +203,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\+|-|%|#|\*|\/|\^|==?|~=|&lt;=?|&gt;=?|(?&lt;!\.)\.{2}(?!\.)|&amp;&amp;|\|\|</string>
+			<string>\+|-|%|#|\*|\/|\^|==?|~=|&lt;=?|&gt;=?|(?&lt;!\.)\.{2,3}(?!\.)|&amp;&amp;|\|\|</string>
 			<key>name</key>
 			<string>keyword.operator.moescript</string>
 		</dict>
