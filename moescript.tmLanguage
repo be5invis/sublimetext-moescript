@@ -185,7 +185,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?&lt;!\.|@|::)\b(do|resend|new|wait|throw)\b(?![ \t]*:)</string>
+			<string>(?&lt;!\.|@|::)\b(do|resend|new|wait|throw|undefined|null)\b(?![ \t]*:)</string>
 			<key>name</key>
 			<string>constant.language.moescript</string>
 		</dict>
@@ -203,7 +203,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\+|-|%|#|\*|\/|\^|==?|~=|&lt;=?|&gt;=?|(?&lt;!\.)\.{2,3}(?!\.)|&amp;&amp;|\|\|</string>
+			<string>\.{2,3}|&lt;-|\|\.|[+\-*\/&lt;&gt;=!%~|&amp;][&lt;&gt;=~|&amp;]*|:[:&gt;]</string>
 			<key>name</key>
 			<string>keyword.operator.moescript</string>
 		</dict>
